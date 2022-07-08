@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="880.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageEmployeesViewController">
+   <children>
+      <ImageView fitHeight="880.0" fitWidth="1520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/v748-toon-111.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblEmployeeList" layoutX="117.0" layoutY="402.0" prefHeight="456.0" prefWidth="1313.0" style="-fx-background-color: #d2dae0#d2dae0;">
+        <columns>
+          <TableColumn fx:id="colEmployeeId" prefWidth="200.0" text="Employee ID" />
+          <TableColumn fx:id="colName" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="colUserId" prefWidth="168.0" text="User ID" />
+            <TableColumn fx:id="colAddress" prefWidth="171.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="163.0" text="Contact" />
+            <TableColumn fx:id="colOccupation" prefWidth="151.0" text="Occupation" />
+            <TableColumn fx:id="colSalary" prefWidth="347.0" text="Salary" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="employeeSearchBar" layoutX="60.0" layoutY="323.0" prefHeight="50.0" prefWidth="295.0" promptText="Search here..." style="-fx-background-color: white;">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="738.0" layoutY="323.0" onAction="#addEmployeeOnAction" prefHeight="56.0" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 100px;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="968.0" layoutY="323.0" onAction="#updateEmployeeOnAction" prefHeight="56.0" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 100px;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1196.0" layoutY="320.0" onAction="#deleteEmployeeOnAction" prefHeight="56.0" prefWidth="180.0" style="-fx-background-color: black; -fx-background-radius: 100px;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="21.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="244.0" layoutY="46.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtEmpId" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="E-001" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="98.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="Employee ID">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="46.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtEmpName" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="Mahela Jayawardhana" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="127.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="127.0" styleClass="textLabel" text="Employee Name">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="244.0" layoutY="119.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtEmpContact" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="075-6407926" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="142.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="142.0" styleClass="textLabel" text="Employee Contact">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="119.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtOccupation" layoutY="3.0" prefHeight="56.0" prefWidth="277.0" promptText="Assistant" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="82.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="Occupation">
+               <font>
+                  <Font name="Book Antiqua Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1009.0" layoutY="119.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtSalary" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="45000.00" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="57.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="Salary">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="244.0" layoutY="195.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtUserId" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="As/Ot-001" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="64.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="User ID">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="622.0" layoutY="205.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtUserName" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="user2234" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="User Name">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1009.0" layoutY="195.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtPassword" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="******" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="74.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="98.0" styleClass="textLabel" text="Password">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1009.0" layoutY="46.0" prefHeight="61.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtEmpAddress" layoutY="1.0" prefHeight="56.0" prefWidth="277.0" promptText="Galle" style="-fx-background-radius: 15px;" styleClass="txtclass">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Label layoutX="27.0" layoutY="-2.0" prefHeight="5.0" prefWidth="142.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="-13.0" prefHeight="27.0" prefWidth="149.0" styleClass="textLabel" text="Employee Address">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

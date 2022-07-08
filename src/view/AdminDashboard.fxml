@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminView" prefHeight="980.0" prefWidth="1927.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardController">
+   <children>
+      <ImageView fitHeight="980.0" fitWidth="1927.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20150402_025.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="100.0" prefWidth="1927.0" style="-fx-background-color: white; -fx-border-color: #ffcd09; -fx-border-width: 2px;">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="916.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/ReSize.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="1697.0" layoutY="31.0" text="User -001">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="594.0" layoutY="30.0" text="Date : ">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="703.0" layoutY="30.0" text="2022-03-27">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="1102.0" layoutY="30.0" text="Time :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="37.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="1219.0" layoutY="31.0" text="12:39:20">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="37.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="context" layoutX="407.0" layoutY="106.0" prefHeight="874.0" prefWidth="1520.0">
+         <children>
+            <AnchorPane layoutX="110.0" layoutY="135.0" opacity="0.97" prefHeight="260.0" prefWidth="395.0" style="-fx-background-color: #e2c4a7; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="lblYear" layoutX="159.0" layoutY="114.0" prefHeight="51.0" prefWidth="91.0" text="2022" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAnnualIncome" layoutX="80.0" layoutY="176.0" prefHeight="54.0" prefWidth="246.0" text="Rs.0.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font></Label>
+                  <Label layoutX="69.0" layoutY="43.0" prefHeight="65.0" prefWidth="255.0" style="-fx-background-color: #c58d4c; -fx-background-radius: 50px;" text=" Annual Income">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="563.0" layoutY="135.0" opacity="0.97" prefHeight="260.0" prefWidth="395.0" style="-fx-background-color: #e2c4a7; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="lblMonth" layoutX="101.0" layoutY="111.0" prefHeight="60.0" prefWidth="210.0" text="March 2022" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMonthlyIncome" layoutX="81.0" layoutY="177.0" prefHeight="54.0" prefWidth="255.0" text="Rs.0.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="62.0" layoutY="35.0" prefHeight="65.0" prefWidth="272.0" style="-fx-background-color: #c58d4c; -fx-background-radius: 50px;" text=" Monthly Income">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1040.0" layoutY="152.0" opacity="0.97" prefHeight="260.0" prefWidth="395.0" style="-fx-background-color: #e2c4a7; -fx-background-radius: 50px;">
+               <children>
+                  <Label fx:id="lblDay" layoutX="80.0" layoutY="98.0" prefHeight="65.0" prefWidth="272.0" text="20 March 2022" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDailyIncome" layoutX="82.0" layoutY="163.0" prefHeight="54.0" prefWidth="255.0" text="Rs.0.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="91.0" layoutY="29.0" prefHeight="65.0" prefWidth="237.0" style="-fx-background-color: #c58d4c; -fx-background-radius: 50px;" text="  Daily Income">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="419.0" layoutY="427.0" opacity="0.97" prefHeight="408.0" prefWidth="655.0" style="-fx-background-color: #e2c4a7; -fx-background-radius: 50px;">
+               <children>
+                  <PieChart fx:id="pieChart" layoutX="95.0" layoutY="4.0" />
+               </children></AnchorPane>
+         </children></AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="456.0" onAction="#manageEmployeeOnAction" prefHeight="65.0" prefWidth="384.0" style="-fx-background-color: #684646;" text="Manage Employees" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="525.0" onAction="#manageItemOnAction" prefHeight="65.0" prefWidth="384.0" style="-fx-background-color: #684646;" text="Manage Item" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="597.0" onAction="#viewReportsOnAction" prefHeight="65.0" prefWidth="384.0" style="-fx-background-color: #684646;" text="View System Reports" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="127.0" fitWidth="127.0" layoutX="136.0" layoutY="146.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/673201_-_Copy-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="97.0" layoutY="285.0" text="Administrator" textFill="#171717">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="34.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogout" buttonType="RAISED" layoutX="88.0" layoutY="823.0" onAction="#viewLoginPageOnAction" prefHeight="60.0" prefWidth="237.0" style="-fx-background-color: #463434;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginView" prefHeight="980.0" prefWidth="1927.0" style="-fx-border-radius: 200px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="980.0" fitWidth="1927.0">
+         <image>
+            <Image url="@../asset/kelly-sikkema-4Z-bBhehYs4-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="900.0" fitWidth="764.0" layoutX="593.0" layoutY="47.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="loginContext" layoutX="1409.0" layoutY="129.0" prefHeight="714.0" prefWidth="449.0" style="-fx-background-color: #f4f3ef; -fx-background-radius: 100px;">
+         <children>
+            <Label layoutX="126.0" layoutY="172.0" prefHeight="99.0" prefWidth="220.0" text="User Login">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="39.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="63.0" layoutY="303.0" prefHeight="55.0" prefWidth="323.0" promptText="User Name" unFocusColor="BLACK">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pwdPassword" labelFloat="true" layoutX="64.0" layoutY="397.0" prefHeight="55.0" prefWidth="323.0" promptText="Password">
+               <font>
+                  <Font name="Book Antiqua" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="144.0" layoutY="526.0" onAction="#loadDashboardOnAction" prefHeight="48.0" prefWidth="162.0" ripplerFill="#013bc3" style="-fx-background-radius: 500px; -fx-background-color: #aea25e;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+            </JFXButton>
+            <Label layoutX="77.0" layoutY="601.0" text="Fogot your password? Need help?">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="186.0" fitWidth="188.0" layoutX="133.0" layoutY="36.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/User.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

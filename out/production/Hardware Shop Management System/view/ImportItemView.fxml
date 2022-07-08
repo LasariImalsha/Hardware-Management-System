@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="880.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ImportItemViewController">
+   <children>
+      <ImageView fitHeight="880.0" fitWidth="1520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/v748-toon-111.jpg" />
+         </image></ImageView>
+      <TableView fx:id="tblShipment" layoutX="46.0" layoutY="474.0" prefHeight="306.0" prefWidth="1407.0" style="-fx-background-color: #d2dae0#d2dae0;">
+        <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="245.0" text="Iteam Code" />
+            <TableColumn fx:id="colName" minWidth="0.0" prefWidth="240.0" text="Name" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="313.0" text="Unit Price" />
+          <TableColumn fx:id="colQuantity" prefWidth="291.0" text="Quantity" />
+          <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="317.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnClearRecord" buttonType="RAISED" layoutX="1128.0" layoutY="412.0" onAction="#clearRecordOnAction" prefHeight="46.0" prefWidth="157.0" style="-fx-background-color: black; -fx-background-radius: 200px;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="1301.0" layoutY="412.0" onAction="#addToShipmentOnAction" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: black; -fx-background-radius: 200px;" text="Add Cart" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1146.0" layoutY="35.0" prefHeight="46.0" prefWidth="122.0" text="Total">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1147.0" layoutY="102.0" opacity="0.83" prefHeight="56.0" prefWidth="319.0" style="-fx-background-color: White; -fx-background-radius: 10px;" text="Rs.37000.00">
+         <font>
+            <Font name="Bookman Old Style Bold" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="1147.0" layoutY="174.0" prefHeight="46.0" prefWidth="174.0" text="Batch No.">
+         <font>
+            <Font name="Bookman Old Style Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBatchNo" layoutX="1147.0" layoutY="229.0" opacity="0.83" prefHeight="46.0" prefWidth="245.0" style="-fx-background-color: White; -fx-background-radius: 10px;" text="B-0021">
+         <font>
+            <Font name="Bookman Old Style Bold" size="34.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbSupplier" layoutX="46.0" layoutY="127.0" prefHeight="31.0" prefWidth="163.0" promptText="Select Supplier" />
+      <ComboBox fx:id="cmbItem" layoutX="596.0" layoutY="127.0" prefWidth="150.0" promptText="Select Item" />
+      <AnchorPane layoutX="253.0" layoutY="40.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtSupId" editable="false" layoutY="-2.0" prefHeight="56.0" prefWidth="277.0" promptText="S-001" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="94.0" styleClass="textLabel" text="Supplier ID">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="253.0" layoutY="116.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtSupName" editable="false" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="Mahela Jayawardhana" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="122.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="122.0" styleClass="textLabel" text="Supplier Name">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="253.0" layoutY="197.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtSupAddress" editable="false" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="Galle" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="148.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="137.0" styleClass="textLabel" text="Supplier Address">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="253.0" layoutY="273.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtSupContact" editable="false" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="075-6407926" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="137.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="137.0" styleClass="textLabel" text="Supplier Contact">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="798.0" layoutY="30.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtItemCode" editable="false" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="I-00001" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="84.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="-12.0" prefHeight="21.0" prefWidth="84.0" styleClass="textLabel" text="Item ID">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="798.0" layoutY="115.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtItemName" editable="false" layoutY="-2.0" prefHeight="56.0" prefWidth="277.0" promptText="Ultra Cement" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="94.0" styleClass="textLabel" text="Item Name">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="798.0" layoutY="185.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtItemDescription" editable="false" layoutY="-2.0" prefHeight="56.0" prefWidth="277.0" promptText="Constructions" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="101.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="94.0" styleClass="textLabel" text="Description">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="798.0" layoutY="260.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtItemPreservedTime" editable="false" layoutY="-2.0" prefHeight="56.0" prefWidth="277.0" promptText="23 Weeks" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="122.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="122.0" styleClass="textLabel" text="Preserved Time">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="798.0" layoutY="334.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtItemUnitPrice" editable="false" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="1850.00" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="84.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="-12.0" prefHeight="21.0" prefWidth="94.0" styleClass="textLabel" text="Unit Price">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1163.0" layoutY="328.0" prefHeight="46.0" prefWidth="277.0">
+         <children>
+            <TextField fx:id="txtQuantity" layoutY="-1.0" prefHeight="56.0" prefWidth="277.0" promptText="20" style="-fx-background-radius: 15px;" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="-4.0" prefHeight="5.0" prefWidth="77.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="-10.0" prefHeight="21.0" prefWidth="77.0" styleClass="textLabel" text="Quantity">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnPlaceShipment" buttonType="RAISED" layoutX="1163.0" layoutY="799.0" onAction="#placeShipmentOnAction" prefHeight="54.0" prefWidth="284.0" style="-fx-background-color: black; -fx-background-radius: 100px;" text="Place Shipment" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
